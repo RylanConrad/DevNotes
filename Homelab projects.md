@@ -1,0 +1,6 @@
+- Auto sync git bash script
+- Install Jellyfin/Emby via docker
+- Torrent engine build
+- NAS Nextcloud
+- Eve-ng setup
+- 
