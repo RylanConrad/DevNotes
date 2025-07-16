@@ -14,3 +14,5 @@ docker run -d -p hostport:containerport namespace/name:tag
 - -p specifies the port
 - namespace/name ---- username/repo(docker/getting-started)
 - tag ----- version of the image
+
+**Volumes**
