@@ -22,9 +22,10 @@ docker run -d -p hostport:containerport namespace/name:tag
 - Saved memory
 - Lives outside of the container *but* can be accessed by the container
 
-'''shell 
+```shell 
 docker run -d -e NODE_ENV=development -e url=http://localhost:3001 -p 3001:2368 -v ghost-vol:/var/lib/ghost ghost
-'''
+```
+
 
 
 - docker con
