@@ -26,6 +26,27 @@ docker run -d -p hostport:containerport namespace/name:tag
 docker run -d -e NODE_ENV=development -e url=http://localhost:3001 -p 3001:2368 -v ghost-vol:/var/lib/ghost ghost
 ```
 
+- -p port forwarding between container and our computer.
+- in this case its hosted at localhost:3001, and the container port is 2368
+- Containers are typically thought of as temporary, so creating a volume makes them persistent.
+- volume mounted at ghost-vol:/var/lib/ghost/content
+
+**Live Shell**
+```shell
+docker exec CONTAINER_ID /bin/sh
+```
+puts you in a live shell on the already running container
+
+-u 0 lets you run stuff as root 
+- --network none separates the container from the network.
 
 
-- docker con
+**Dockerfile**
+- Used for building a docker Image.
+- Automates the entire image creation process
+- FROM: - specifies the base image to start from
+- WORKDIR - sets the working directory
+- COPY: copies files from local machine into the image
+- RUN: Executes commands during image build
+- EXPOSE: Informs docker that the container listens on the specified network ports at runtime.
+- CMD: Default commands for a container("echo")
